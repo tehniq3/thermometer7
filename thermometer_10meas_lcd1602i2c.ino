@@ -2,8 +2,8 @@
 // original sketch by Nicu FLORICA (niq_ro)
 
 // Include the libraries we need
-#include <OneWire.h>
-#include <DallasTemperature.h>
+#include <OneWire.h>    // https://www.pjrc.com/teensy/td_libs_OneWire.html
+#include <DallasTemperature.h>  // https://github.com/milesburton/Arduino-Temperature-Control-Library
 
 // Data wire is plugged into port 2 on the Arduino
 #define ONE_WIRE_BUS 4
@@ -14,7 +14,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature. 
 DallasTemperature sensors(&oneWire);
 
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h>  // https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library  
 LiquidCrystal_I2C lcd(0x3F,16,2); // 0x20 is adresss for LCC 16x2
 
 byte grad[8] = {
