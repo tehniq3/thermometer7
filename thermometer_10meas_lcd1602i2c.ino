@@ -1,3 +1,6 @@
+// thermometer with constant temperature for a while
+// original sketch by Nicu FLORICA (niq_ro)
+
 // Include the libraries we need
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -24,7 +27,7 @@ byte grad[8] = {
   B00000,
 };
 
-const int numar = 30;
+const int numar = 10;
 float t[numar];
 byte err[numar];
 float temed = 0.;
